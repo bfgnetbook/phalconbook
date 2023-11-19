@@ -10,14 +10,7 @@ Skeleton application using  [Phalcon framework](https://phalcon.io).
 ## Installing via Git
 
 ```bash
-git clone --depth=1 https://github.com/bfgnetbook/phalconbook my-project
-rm -rf ./my-project/.git
-find ./my-project -type f -name "*.gitkeep" -exec rm -f {} \;
-```
-
-Once installed, you can test it out immediately using PHP's built-in web server:
-
-```bash
 cd my-project
-php -S 0.0.0.0:8000 -t public
+git clone --depth=1 https://github.com/bfgnetbook/phalconbook .
+composer install
 ```
