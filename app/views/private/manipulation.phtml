@@ -1,0 +1,35 @@
+<form action="<?=$this->request->getURI()?>" method="post" class="mt-5">
+    <?= $this->flash->output(); ?>
+    <?php
+    $messages = $form->getMessages();
+    // Traverse the form
+    foreach ($form as $element) {
+        // Get any generated messages for the current element
+        $messages = $form->getMessagesFor(
+            $element->getName()
+        );
+        echo '<div class="mb-3">';
+        echo '<label for="' .
+            $element->getName() .
+            '" class="form-label">' .
+            $element->getLabel() .
+            '</label>';
+
+        if (count($messages)) {
+            echo $form->render($element->getName(), ['class' => 'form-control is-invalid']);
+            // Print each element
+            echo '<div style="margin:0px;color:red"><ul>';
+            foreach ($messages as $message) {
+                echo '<li>' . $message . '</li>';
+            }
+            echo '</ul></div>';
+        } else {
+            echo $element;
+        }
+        echo '</div>';
+   }
+    ?>
+    <input type="hidden" value="<?=$id?>" name="id" />
+    <button type="submit" class="btn btn-primary">Send</button>
+    <a type="button" class="btn btn-danger" href="/private">Cancel</a>
+</form>

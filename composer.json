@@ -1,0 +1,42 @@
+{
+    "name": "bfgnetbook/phalconbook",
+    "type": "project",
+    "description": "Test application based on the book 'WEB DEVELOPMENT WITH PHALCON PHP'.",
+    "keywords": [
+        "php",
+        "phalcon",
+        "project",
+        "skeleton"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Basilio Fajardo",
+            "email": "bfgnet@yahoo.es",
+            "homepage": "https://github.com/bfgnetbook"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-pdo": "*",
+        "ext-phalcon": "^5.0.0"
+    },
+    "require-dev": {
+        "phalcon/ide-stubs": "^5.0.0",
+        "phalcon/migrations": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Holidays\\": "app/"
+        }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "@php -r '$dir = \"{.[!.],}*/\"; array_map(\"unlink\", glob(\"./{,$dir,$dir$dir,$dir$dir$dir}.gitkeep\", GLOB_BRACE));'"
+        ],
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S 0.0.0.0:8000 -t public"
+        ]
+    }
+}

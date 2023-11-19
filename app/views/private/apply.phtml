@@ -1,0 +1,16 @@
+<?= $this->flash->output(); ?>
+<div class="alert alert-warning mt-5" role="alert">
+    <h4 class="alert-heading">Confirm holidays</h4>
+    <p>We need you to confirm the approval of the holiday request.</p>
+    <hr>
+    <p class="mb-0">
+    <form action="<?= $this->request->getURI() ?>" method="post">
+        <input type="hidden" name="id" value="<?= $id ?>" />
+        <select class="form-select" name="option">
+            <option value="YES">YES</option>
+            <option value="NO" selected>NO</option>
+        </select>
+        <button type="submit" class="btn btn-secondary mt-4">Send</button>
+    </form>
+    </p>
+</div>

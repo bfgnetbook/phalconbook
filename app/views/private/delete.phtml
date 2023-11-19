@@ -1,0 +1,13 @@
+<?= $this->flash->output(); ?>
+<div class="alert alert-warning mt-5" role="alert">
+    <h4 class="alert-heading">Confirm event deletion</h4>
+    <p>¿Do you confirm the deletion of the register?</p>
+    <hr>
+    <p class="mb-0">
+    <form action="<?=$this->request->getURI()?>" method="post">
+        <input type="hidden" name="id" value="<?=$id?>" />
+        <button type="submit" class="btn btn-secondary">Yes</button>
+        <button type="button" class="btn btn-secondary" onclick="location.href='/private'">No</button>
+    </form>
+    </p>
+</div>
