@@ -17,7 +17,7 @@ composer install
 ## Config database and execute migrations
 
 - Open /path_myproject/app/config/config.php and enter your database connection details
-- excute command line: /path_myproject/vendor/bin/phalcon-migrations run
+- execute command line: /path_myproject/vendor/bin/phalcon-migrations run
 
 ## Test users
 
