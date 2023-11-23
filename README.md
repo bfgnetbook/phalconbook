@@ -13,15 +13,17 @@ Skeleton application using  [Phalcon framework](https://phalcon.io).
 cd my-project
 git clone --depth=1 https://github.com/bfgnetbook/phalconbook .
 composer install
-
+/path_myproject/vendor/bin/phalcon-migrations run
 ```
 
 ## Test users
 
 - ROL: employed:
+
 username: user
 password: demo
 
-- ROL: manager
+- ROL: manager:
+
 username: admin
 password: demo
