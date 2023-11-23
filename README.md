@@ -13,4 +13,15 @@ Skeleton application using  [Phalcon framework](https://phalcon.io).
 cd my-project
 git clone --depth=1 https://github.com/bfgnetbook/phalconbook .
 composer install
+
 ```
+
+## Test users
+
+- ROL: employed:
+username: user
+password: demo
+
+- ROL: manager
+username: admin
+password: demo
