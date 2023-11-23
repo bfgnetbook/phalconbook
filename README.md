@@ -13,8 +13,11 @@ Skeleton application using  [Phalcon framework](https://phalcon.io).
 cd my-project
 git clone --depth=1 https://github.com/bfgnetbook/phalconbook .
 composer install
-/path_myproject/vendor/bin/phalcon-migrations run
 ```
+## Config database and execute migrations
+
+- Open /path_myproject/app/config/config.php and enter your database connection details
+- excute command line: /path_myproject/vendor/bin/phalcon-migrations run
 
 ## Test users
 
